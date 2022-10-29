@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include<windows.h>
-void add();
-void sub();
-void mup();
-void division();
-void fact();
-void cube();
-void squre();
-void squreroot();
-void modulo();
-void power();
+#include <windows.h>
+int add();
+int sub();
+int mupl();
+int division();
+int fact();
+int cube();
+int squre();
+int squreroot();
+int modulo();
+int power();
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     int choice;
     while (1)
     {
-        printf("******/ WELCOME TO SCINTIFIC CALUCULATOR /******");
+        printf("******/  CALUCULATOR   /******");
         printf("Enter your choice out of this\n");
         printf("Enter 0 to exit\n");
         printf("1. FOR ADDITION\n");
@@ -34,91 +34,96 @@ int main()
         printf("9. FOR MODOULO\n");
         printf("10.FOR POWER\n");
         scanf("%d", &choice);
-        if (choice!=0)
-       { switch (choice)
+        if (choice != 0)
         {
-        case 1:
-            add();
-            break;
-            return 1;
-        case 2:
-            sub();
-            break;
-            return 1;
-        case 3:
-            mup();
-            break;
-            return 1;
-        case 4:
-            division();
-            break;
-            return 1;
-        case 5:
-            fact();
-            break;
-            return 1;
-        case 6:
-            cube();
-            break;
-            return 1;
-        case 7:
-            squre();
-            break;
-            return 1;
-        case 8:
-            squreroot();
-            break;
-            return 1;
-        case 9:
-            modulo();
-            break;
-            return 1;
-        case 10:
-            power();
-            break;
-            return 1;
-        default:
-            printf("this is an invalid option\n");
-             return 1;
+            switch (choice)
+            {
+            case 1:
+                add();
+                break;
+                return 1;
+            case 2:
+                sub();
+                break;
+                return 1;
+            case 3:
+                mupl();
+                break;
+                return 1;
+            case 4:
+                division();
+                break;
+                return 1;
+            case 5:
+                fact();
+                break;
+                return 1;
+            case 6:
+                cube();
+                break;
+                return 1;
+            case 7:
+                squre();
+                break;
+                return 1;
+            case 8:
+                squreroot();
+                break;
+                return 1;
+            case 9:
+                modulo();
+                break;
+                return 1;
+            case 10:
+                power();
+                break;
+                return 1;
+            default:
+                printf("this is an invalid option\n");
+                return 1;
+            }
         }
-       }
-       else
-       getchar();
-       exit(0);
+        else
+            getchar();
+        exit(0);
     }
 
     return 0;
 }
-void add()
+int add()
 {
     int a, b;
     printf("Enter the values to add\n");
     scanf("%d%d", &a, &b);
     printf("The SUM of a&b is %d", a + b);
+    return 1;
 }
-void sub()
+int sub()
 {
     int a, b;
     printf("Enter the values to substract\n");
     scanf("%d%d", &a, &b);
     printf("The DIFFERANCE of a&b is %d", a - b);
+    return 1;
 }
-void mup()
+int mupl()
 {
 
     int a, b;
     printf("Enter the values to multiply\n");
     scanf("%d%d", &a, &b);
     printf("The PRODUCT of a&b is %d", a * b);
+    return 1;
 }
-void division()
+int division()
 {
     int a, b;
     printf("Enter the values to divide\n");
     scanf("%d%d", &a, &b);
     printf("The qosient of a&b is %d", a / b);
+    return 1;
 }
-void fact()
+int fact()
 {
     int a, fac;
     printf("Enter the value of number\n");
@@ -129,16 +134,18 @@ void fact()
         fac = fac * i;
     }
     printf("The FACTORIAL of %d is %d", a, fac);
+    return 1;
 }
-void cube()
+int cube()
 {
     double a, cub = 0;
     printf("Enter the value of number\n");
     scanf("%ld", &a);
     cub = pow(a, 3);
     printf("The cube of a is %ld", cub);
+    return 1;
 }
-void squre()
+int squre()
 {
 
     double a, cub = 0;
@@ -146,8 +153,9 @@ void squre()
     scanf("%ld", &a);
     cub = pow(a, 2);
     printf("The SQAURE of a is %ld", cub);
+    return 1;
 }
-void squreroot()
+int squreroot()
 {
 
     double a, cub = 0;
@@ -155,19 +163,22 @@ void squreroot()
     scanf("%ld", &a);
     cub = sqrt(a);
     printf("The SQAUREROOT of a is %ld", cub);
+    return 1;
 }
-void modulo()
+int modulo()
 {
     int a, b;
     printf("Enter the values to divide\n");
     scanf("%d%d", &a, &b);
     printf("The  of a&b REMINDER is %d", a % b);
+    return 1;
 }
-void power()
+int power()
 {
     double a, b, cub = 0;
     printf("Enter the value of numbers\n");
     scanf("%ld%ld", &a, &b);
     cub = pow(a, b);
     printf("The POWER of a to b is %ld", cub);
+    return 1;
 }
