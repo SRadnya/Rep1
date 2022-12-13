@@ -1,0 +1,11 @@
+p{
+    color: rgba(69, 170, 113, 0.705);
+     font-size: 400%;
+     background-color: #a95e24d4;
+     height: 80px;
+     width: 90px;
+     padding: 16px ;
+     border: 10px #db3620 ridge;
+     outline-style: solid;
+     outline-color: aqua;
+}
